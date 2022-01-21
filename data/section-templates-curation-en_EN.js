@@ -1,3 +1,5 @@
+import { run } from 'jest'
+
 export const en_EN = [
   {
     slug: 'title-and-description',
@@ -15,7 +17,7 @@ A brief description of the dataset.
     markdown: `
 ## Data Overview
 
-*As appropriate, describe variables, units, labels, coordinate systems, resolution, geographic extent, temporal range, temporal range etc.
+*As appropriate, describe variables, units, labels, coordinate systems, resolution, geographic extent, temporal range, temporal range etc.*
 
 
 #### Variables & Units
@@ -43,7 +45,7 @@ A brief description of the dataset.
 
 \`\`\`
   ├── LICENSE
-  ├── Makefile           <- Makefile for generator figures
+  ├── Makefile           <- Makefile for generating figures
   ├── README.md          <- This file.
   ├── data
   │   ├── external       <- Data from third party sources.
@@ -62,12 +64,10 @@ A brief description of the dataset.
     markdown: `
 ## Usage/Examples
 
-\`\`\`javascript
-import Component from 'my-project'
+Generate figures with commands: 
 
-function App() {
-  return <Component />
-}
+\`\`\`
+$ scripts/gen.py --source data.csv
 \`\`\`
 
 `,
@@ -76,7 +76,7 @@ function App() {
     slug: 'citation',
     name: 'Citation',
     markdown: `
-## Peferred Citation
+## Preferred Citation
 
 Please cite this data as follows:
 
@@ -107,11 +107,13 @@ Gene Fox:
 - Institution: 
 - Address: 
 - Email: 
+- ORCID
 
 Simeon Schroeder: 
 - Institution: 
 - Address: 
-- Email: 
+- Email:
+- ORCID: 
 
 Corresponding author: Gene Fox
 
